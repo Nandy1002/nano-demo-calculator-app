@@ -1,12 +1,15 @@
-from flask import Flask
-from flask import Flask,request,jsonify
+from flask import Flask, request, jsonify
+from dataclasses import dataclass
+
+@dataclass
+class Result:
+    result: int
 
 app = Flask(__name__)
 
-
 @app.route("/calculator/greeting", methods=['GET'])
 def greeting():
-    return 'hello world'
+    return 'Hello world'
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
