@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/calculator/greeting", methods=['GET'])
 def greeting():
-    return '<h1>hello world</h1>'
+    return 'hello world'
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
@@ -21,4 +21,4 @@ def subtract():
     return jsonify(ans)
 
 if __name__ == '__main__':
-    app.run(port=8081,host='0.0.0.0')
+    app.run(port=8080,host='0.0.0.0')
